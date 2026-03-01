@@ -1,0 +1,41 @@
+{
+  "module": 1,
+  "round": 1,
+  "status": "bugs_found",
+  "bugCount": 18,
+  "breakdown": {
+    "critical": 5,
+    "high": 8,
+    "medium": 4,
+    "low": 1
+  },
+  "timestamp": "2026-03-01T09:00:00.000Z",
+  "testDuration": "4.5 hours",
+  "testCoverage": {
+    "filesReviewed": 23,
+    "linesOfCode": 2500,
+    "testCasesPlanned": 60,
+    "testCasesExecuted": 48,
+    "testCasesPassed": 32,
+    "testCasesFailed": 16,
+    "testCasesSkipped": 12,
+    "passRate": "66.7%"
+  },
+  "gatesCompleted": {
+    "gate1_reconnaissance": "complete",
+    "gate2_security_scan": "fail",
+    "gate3_type_safety": "partial",
+    "gate4_edge_cases": "fail",
+    "gate5_performance": "skipped"
+  },
+  "criticalIssues": [
+    "BUG-001: Hardcoded JWT secret",
+    "BUG-002: No input validation",
+    "BUG-003: Rate limit burst logic broken",
+    "BUG-004: Rate limit race condition",
+    "BUG-005: Password strength not enforced"
+  ],
+  "recommendation": "DO NOT DEPLOY TO PRODUCTION",
+  "nextStep": "Developer Agent must fix all CRITICAL + HIGH bugs",
+  "estimatedFixTime": "2-3 days"
+}
