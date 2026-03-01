@@ -66,12 +66,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-    volumes:
-      - ./src:/app/src
-      - ./node_modules:/app/node_modules
     networks:
       - api-network
-    command: npm run dev
 
 volumes:
   postgres_data:

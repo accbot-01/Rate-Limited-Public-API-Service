@@ -1,0 +1,107 @@
+[
+  {
+    "test_id": "FR-001.1",
+    "test_name": "Register new user with valid data",
+    "status": "PASS",
+    "details": "User registered successfully with API key",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-001.2",
+    "test_name": "Reject registration with weak password",
+    "status": "PASS",
+    "details": "Weak password rejected with 400",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-001.3",
+    "test_name": "Reject duplicate email registration",
+    "status": "PASS",
+    "details": "Duplicate email rejected with 409",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-002.1",
+    "test_name": "Login with valid credentials",
+    "status": "FAIL",
+    "details": "Expected 200, got 500",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-002.2",
+    "test_name": "Reject login with invalid password",
+    "status": "FAIL",
+    "details": "Expected 401, got 500",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-002.3",
+    "test_name": "Reject login with non-existent email",
+    "status": "PASS",
+    "details": "Non-existent email rejected with 401",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-003.1",
+    "test_name": "Get user profile with masked API key",
+    "status": "PASS",
+    "details": "Profile retrieved with masked API key: ak_live_Q1Q5Ea1****",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-003.2",
+    "test_name": "Rotate API key successfully",
+    "status": "PASS",
+    "details": "New API key received: ak_live_xm6b-CX99tB_...",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-003.2a",
+    "test_name": "Old API key invalidated after rotation",
+    "status": "PASS",
+    "details": "Old key rejected with 403",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-004.1",
+    "test_name": "Access public data with valid API key",
+    "status": "PASS",
+    "details": "Data retrieved with correct pagination",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-004.2",
+    "test_name": "Reject request without API key",
+    "status": "PASS",
+    "details": "Request rejected with 401",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-004.3",
+    "test_name": "Reject invalid pagination parameters",
+    "status": "PASS",
+    "details": "Invalid pagination rejected with 400",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-005.1",
+    "test_name": "Rate limit headers present (free tier)",
+    "status": "PASS",
+    "details": "Headers: Limit=60, Remaining=58, Reset=1772355840000",
+    "timestamp": "2026-03-01T09:03:01Z"
+  },
+  {
+    "test_id": "FR-005.2",
+    "test_name": "Rate limit enforced after 60 requests/minute",
+    "status": "PASS",
+    "details": "Got 429 after 58 successful requests",
+    "timestamp": "2026-03-01T09:03:02Z"
+  },
+  {
+    "test_id": "FR-009.1",
+    "test_name": "Verify all requests are logged",
+    "status": "MANUAL",
+    "details": "Requires database query or admin endpoint check",
+    "timestamp": "2026-03-01T09:03:02Z"
+  }
+]
