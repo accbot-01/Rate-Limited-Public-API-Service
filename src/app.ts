@@ -36,7 +36,7 @@ export function createApp(): Application {
   app.use(requestLogger);
 
   // Health check (no /api/v1 prefix)
-  app.use('/health', healthRoutes);
+  app.use('/', healthRoutes);
 
   // API routes
   app.use('/api/v1', authRoutes);
